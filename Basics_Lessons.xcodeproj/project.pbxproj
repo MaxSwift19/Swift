@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE116DC62395422A00B36079 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE116DC52395422A00B36079 /* main.swift */; };
 		CE116DCD2395456600B36079 /* Lesson_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE116DCC2395456600B36079 /* Lesson_1.swift */; };
 		CE116DCF239545BA00B36079 /* Lesson_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE116DCE239545BA00B36079 /* Lesson_2.swift */; };
 		CE116DD1239545CA00B36079 /* Lesson_3.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE116DD0239545CA00B36079 /* Lesson_3.swift */; };
@@ -27,7 +26,6 @@
 
 /* Begin PBXFileReference section */
 		CE116DC22395422A00B36079 /* Basics_Lessons */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Basics_Lessons; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE116DC52395422A00B36079 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		CE116DCC2395456600B36079 /* Lesson_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson_1.swift; sourceTree = "<group>"; };
 		CE116DCE239545BA00B36079 /* Lesson_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson_2.swift; sourceTree = "<group>"; };
 		CE116DD0239545CA00B36079 /* Lesson_3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson_3.swift; sourceTree = "<group>"; };
@@ -63,7 +61,6 @@
 		CE116DC42395422A00B36079 /* Basics_Lessons */ = {
 			isa = PBXGroup;
 			children = (
-				CE116DC52395422A00B36079 /* main.swift */,
 				CE116DCC2395456600B36079 /* Lesson_1.swift */,
 				CE116DCE239545BA00B36079 /* Lesson_2.swift */,
 				CE116DD0239545CA00B36079 /* Lesson_3.swift */,
@@ -129,7 +126,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE116DC62395422A00B36079 /* main.swift in Sources */,
 				CE116DCF239545BA00B36079 /* Lesson_2.swift in Sources */,
 				CE116DCD2395456600B36079 /* Lesson_1.swift in Sources */,
 				CE116DD1239545CA00B36079 /* Lesson_3.swift in Sources */,

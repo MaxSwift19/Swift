@@ -126,20 +126,22 @@ struct Car {
     
 }
 
-var bmwCar = Car("BMW", 2019, .black)
-var audiCar = Car("Audi", 2019, .white)
-
-
-bmwCar.infoAboutCar()
-bmwCar.engineAction(.start)
-bmwCar.windowsAction(.open)
-bmwCar.checkTrunk = 200
-bmwCar.trunkAction(.download)
-
-
-
-audiCar.infoAboutCar()
-audiCar.engineAction(.finish)
-audiCar.windowsAction(.close)
-audiCar.checkTrunk = 300
-audiCar.trunkAction(.unload)
+func auto(){
+    var bmwCar = Car("BMW", 2019, .black)
+    var audiCar = Car("Audi", 2019, .white)
+    
+    
+    bmwCar.infoAboutCar()
+    bmwCar.engineAction(.start)
+    bmwCar.windowsAction(.open)
+    bmwCar.checkTrunk = 200
+    bmwCar.trunkAction(.download)
+    
+    
+    
+    audiCar.infoAboutCar()
+    audiCar.engineAction(.finish)
+    audiCar.windowsAction(.close)
+    audiCar.checkTrunk = 300
+    audiCar.trunkAction(.unload)
+}
