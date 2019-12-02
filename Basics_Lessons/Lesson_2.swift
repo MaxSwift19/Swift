@@ -12,18 +12,20 @@ import Foundation
 
 var money = 100
 
-money >= 100 ? print("Денег достаточно!") : print("Денег не достаточно!")
-
+func ternar(){
+    money >= 100 ? print("Денег достаточно!") : print("Денег не достаточно!")
+}
 // ----------------------------------------------------------------------------
- 
+
 // Задача №1 Написать функцию, которая определяет, четное число или нет.
 
 func checkConditions (_ number: Int) -> Bool {
     return number % 2 == 0
 }
 
-print(checkConditions(10))
-
+func checkOne(){
+    print(checkConditions(10))
+}
 
 // Задача №2 Написать функцию, которая определяет, делится ли число без остатка на 3.
 
@@ -31,8 +33,9 @@ func checkConditionsTwo (_ number: Int) -> Bool {
     return number % 3 == 0
 }
 
-print(checkConditionsTwo(9))
-
+func checkTwo(){
+    print(checkConditionsTwo(9))
+}
 
 // Задача №3 Создать возрастающий массив из 100 чисел.
 
@@ -41,7 +44,7 @@ var array = Array(0...100) // [0...100] Более быстрый способ
 //for i in 0...100 {
 //    array.append(i)
 //}
- // print(array)
+// print(array)
 
 
 // Задача №4 Удалить из этого массива все четные числа и все числа, которые не делятся на 3.
@@ -61,11 +64,11 @@ var array = Array(0...100) // [0...100] Более быстрый способ
 //        deleteElement(revise)
 //    }
 //}
-
-array = array.filter { $0 % 2 != 0 && $0 % 3 == 0 } // Если true -> add console
+func arrayFilter(){
+    array = array.filter { $0 % 2 != 0 && $0 % 3 == 0 } // Если true -> add console
     
-print(array)
-
+    print(array)
+}
 
 // Задание №5 Написать функцию, которая добавляет в массив новое число Фибоначчи, и добавить при помощи нее 100 элементов.
 
