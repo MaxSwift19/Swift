@@ -10,11 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var loginLabel: UITextField!
+    @IBOutlet weak var PasswordLabel: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func pressButton(_ sender: UIButton) {
+    }
+    
 }
 
