@@ -11,7 +11,6 @@
 		CED86C99239623EA009BD334 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED86C98239623EA009BD334 /* SceneDelegate.swift */; };
 		CED86C9B239623EA009BD334 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED86C9A239623EA009BD334 /* ViewController.swift */; };
 		CED86C9E239623EA009BD334 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED86C9C239623EA009BD334 /* Main.storyboard */; };
-		CED86CA0239623EC009BD334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED86C9F239623EC009BD334 /* Assets.xcassets */; };
 		CED86CA3239623EC009BD334 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED86CA1239623EC009BD334 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -21,7 +20,6 @@
 		CED86C98239623EA009BD334 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CED86C9A239623EA009BD334 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CED86C9D239623EA009BD334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CED86C9F239623EC009BD334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CED86CA2239623EC009BD334 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CED86CA4239623EC009BD334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,7 +58,6 @@
 				CED86C98239623EA009BD334 /* SceneDelegate.swift */,
 				CED86C9A239623EA009BD334 /* ViewController.swift */,
 				CED86C9C239623EA009BD334 /* Main.storyboard */,
-				CED86C9F239623EC009BD334 /* Assets.xcassets */,
 				CED86CA1239623EC009BD334 /* LaunchScreen.storyboard */,
 				CED86CA4239623EC009BD334 /* Info.plist */,
 			);
@@ -126,7 +123,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED86CA3239623EC009BD334 /* LaunchScreen.storyboard in Resources */,
-				CED86CA0239623EC009BD334 /* Assets.xcassets in Resources */,
 				CED86C9E239623EA009BD334 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
