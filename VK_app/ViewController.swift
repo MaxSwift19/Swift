@@ -9,17 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var loginLabel: UITextField!
     @IBOutlet weak var PasswordLabel: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let hideAction = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(hideAction)
     }
-
+    
+    @objc func hideKeyboard(){
+        view.endEditing(true )
+    }
+    
     @IBAction func pressButton(_ sender: UIButton) {
+        guard let loginInput = loginLabel.text,
+            let passwordInput = PasswordLabel.text else {
+                return
+        }
+        print(loginInput + " " + passwordInput)
     }
     
 }
