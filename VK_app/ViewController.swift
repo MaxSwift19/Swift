@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var loginLabel: UITextField!
-    @IBOutlet weak var PasswordLabel: UITextField!
+    @IBOutlet weak var passwordLabel: UITextField!
     
     
     override func viewDidLoad() {
@@ -26,11 +26,14 @@ class ViewController: UIViewController {
     
     @IBAction func pressButton(_ sender: UIButton) {
         guard let loginInput = loginLabel.text,
-            let passwordInput = PasswordLabel.text else {
+            let passwordInput = passwordLabel.text
+            else {
                 return
         }
-        print(loginInput + " " + passwordInput)
+       
+          print(loginInput + " " + passwordInput)
     }
+    
     
 }
 
