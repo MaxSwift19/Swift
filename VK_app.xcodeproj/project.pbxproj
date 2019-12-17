@@ -12,8 +12,9 @@
 		CE1E238A23A10EB6009B0435 /* GroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E238923A10EB6009B0435 /* GroupsController.swift */; };
 		CE1E238C23A111A3009B0435 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E238B23A111A3009B0435 /* User.swift */; };
 		CE1E238E23A112FA009B0435 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1E238D23A112FA009B0435 /* Group.swift */; };
+		CE29D57823A8F8AA00D44163 /* CircleShadowImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE29D57723A8F8AA00D44163 /* CircleShadowImage.swift */; };
 		CE3D4B41239F812300C24304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3D4B40239F812300C24304 /* Assets.xcassets */; };
-		CE3D4B43239F97C300C24304 /* FriendsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D4B42239F97C300C24304 /* FriendsList.swift */; };
+		CE3D4B43239F97C300C24304 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3D4B42239F97C300C24304 /* FriendsViewController.swift */; };
 		CE5465B4239FC7E000AC948E /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5465B3239FC7E000AC948E /* PhotoView.swift */; };
 		CE986FB4239FAC1B0041605B /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE986FB3239FAC1B0041605B /* FriendCell.swift */; };
 		CED86C97239623EA009BD334 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED86C96239623EA009BD334 /* AppDelegate.swift */; };
@@ -29,8 +30,9 @@
 		CE1E238923A10EB6009B0435 /* GroupsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsController.swift; sourceTree = "<group>"; };
 		CE1E238B23A111A3009B0435 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CE1E238D23A112FA009B0435 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		CE29D57723A8F8AA00D44163 /* CircleShadowImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleShadowImage.swift; sourceTree = "<group>"; };
 		CE3D4B40239F812300C24304 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CE3D4B42239F97C300C24304 /* FriendsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsList.swift; sourceTree = "<group>"; };
+		CE3D4B42239F97C300C24304 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		CE5465B3239FC7E000AC948E /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		CE986FB3239FAC1B0041605B /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		CED86C93239623EA009BD334 /* VK_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE29D57623A8D12E00D44163 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CE29D57723A8F8AA00D44163 /* CircleShadowImage.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		CE78D6B323A0F931006D02B4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,7 +75,7 @@
 		CEA43FC823A0FFF30031E575 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
-				CE3D4B42239F97C300C24304 /* FriendsList.swift */,
+				CE3D4B42239F97C300C24304 /* FriendsViewController.swift */,
 				CE986FB3239FAC1B0041605B /* FriendCell.swift */,
 				CE5465B3239FC7E000AC948E /* PhotoView.swift */,
 			);
@@ -105,6 +115,7 @@
 				CED86C98239623EA009BD334 /* SceneDelegate.swift */,
 				CED86C9A239623EA009BD334 /* ViewController.swift */,
 				CED86C9C239623EA009BD334 /* Main.storyboard */,
+				CE29D57623A8D12E00D44163 /* UI */,
 				CEA43FC823A0FFF30031E575 /* Friends */,
 				CEA43FC923A100170031E575 /* Groups */,
 				CE78D6B323A0F931006D02B4 /* Model */,
@@ -187,13 +198,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1E238E23A112FA009B0435 /* Group.swift in Sources */,
+				CE29D57823A8F8AA00D44163 /* CircleShadowImage.swift in Sources */,
 				CED86C9B239623EA009BD334 /* ViewController.swift in Sources */,
 				CE1E238523A107AE009B0435 /* GroupsList.swift in Sources */,
 				CE986FB4239FAC1B0041605B /* FriendCell.swift in Sources */,
 				CED86C97239623EA009BD334 /* AppDelegate.swift in Sources */,
 				CE5465B4239FC7E000AC948E /* PhotoView.swift in Sources */,
 				CED86C99239623EA009BD334 /* SceneDelegate.swift in Sources */,
-				CE3D4B43239F97C300C24304 /* FriendsList.swift in Sources */,
+				CE3D4B43239F97C300C24304 /* FriendsViewController.swift in Sources */,
 				CE1E238A23A10EB6009B0435 /* GroupsController.swift in Sources */,
 				CE1E238C23A111A3009B0435 /* User.swift in Sources */,
 				CE1E238823A10818009B0435 /* GroupCell.swift in Sources */,
