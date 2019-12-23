@@ -24,6 +24,11 @@ class ViewController: UIViewController {
         view.endEditing(true )
     }
     
+    @IBAction func setLike(_ sender: Any) {
+        (sender as! LikeButton).like()
+    }
+    
+    
     @IBAction func pressButton(_ sender: UIButton) {
         guard let loginInput = loginLabel.text,
             let passwordInput = passwordLabel.text

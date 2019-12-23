@@ -1,17 +1,14 @@
 
 class UserModel {
-    
-    var userName, gender, avatar: String
-    var dateOfBirthday: Int
-    var satus: Bool
-    
-     init(userName: String, gender: String, avatar: String, dateOfBirthday: Int, satus: Bool) {
+
+    var userName, surName, avatar: String
+    var id: Int
+
+     init(userName: String, surName: String, avatar: String, id: Int) {
         self.userName = userName
-        self.gender = gender
+        self.surName = surName
         self.avatar = avatar
-        self.dateOfBirthday = dateOfBirthday
-        self.satus = satus
+        self.id = id
     }
-    
     
 }

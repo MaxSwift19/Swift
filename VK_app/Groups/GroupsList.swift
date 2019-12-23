@@ -3,14 +3,34 @@ import UIKit
 
 class GroupsList: UITableViewController {
     
+    var customRefreshControl = UIRefreshControl()
+    
     var groupList = ["Машины", "Кино", "ММВБ"]
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addRefreshControl()
     }
     
+    // добавляем индикатор обновления
+    func addRefreshControl(){
+        customRefreshControl.attributedTitle = NSAttributedString(string: "Updating...")
+        // настройка метода
+        customRefreshControl.addTarget(self, action: #selector(updateTableGroups), for: .valueChanged )
+        tableView.addSubview(customRefreshControl)
+    }
+    
+    @objc func updateTableGroups(){
+        print("Start")
+        
+        // фун-ия (многопоточность) для отложенного действия, указываем через какое время выполнить
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3){
+            self.customRefreshControl.endRefreshing()
+        }
+    }
+        
     /*
      // Кол-во групп в списке
      override func numberOfSections(in tableView: UITableView) -> Int {
@@ -26,7 +46,7 @@ class GroupsList: UITableViewController {
     //
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupsView", for: indexPath) as! GroupCell
-        cell.GroupView.text = groupList[indexPath.row]
+        cell.groupLable.text = groupList[indexPath.row]
         return cell
     }
     
@@ -40,4 +60,3 @@ class GroupsList: UITableViewController {
     }
     
 }
-

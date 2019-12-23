@@ -2,6 +2,7 @@
 import UIKit
 
 class GroupCell: UITableViewCell {
-    @IBOutlet weak var GroupView: UILabel!
+
+    @IBOutlet weak var groupLable: UILabel!
     
 }

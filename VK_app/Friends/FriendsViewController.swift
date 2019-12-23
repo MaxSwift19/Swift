@@ -8,11 +8,22 @@ struct Section<T> {
 
 class FriendsViewController: UITableViewController {
     
-    // var friendsList = ["Максим Красавчик ;)", "Ирина Быстрова", "Дмитрий Орлов"]
+    @IBOutlet weak var searchBar: UISearchBar!
     
-    var friendsList = [UserModel(userName: "Максим Красавчик ;)", gender: "Man", avatar: "Ava", dateOfBirthday: 1986, satus: false),
-                       UserModel(userName: "Ирина Быстрова", gender: "Woman", avatar: "Ava", dateOfBirthday: 1987, satus: false),
-                       UserModel(userName: "Дмитрий Орлов", gender: "Man", avatar: "Ava", dateOfBirthday: 1985, satus: false)]
+    
+    var friendsList = [UserModel(userName: "Максим", surName: "Красавчик ;)", avatar: "Ava", id: 0),
+                       UserModel(userName: "Ирина", surName: "Быстрова", avatar: "Ava", id: 1),
+                       UserModel(userName: "Дмитрий", surName: "Орлов", avatar: "Ava", id: 2),
+                       UserModel(userName: "Алексей", surName: "Морозов", avatar: "Ava", id: 3),
+                       UserModel(userName: "Светлана", surName: "Соколова", avatar: "Ava", id: 4),
+                       UserModel(userName: "Александр", surName: "Грунов", avatar: "Ava", id: 5),
+                       UserModel(userName: "Виктор", surName: "Беляев", avatar: "Ava", id: 6),
+                       UserModel(userName: "Вадим", surName: "Шишкин", avatar: "Ava", id: 7),
+                       UserModel(userName: "Дмитрий", surName: "Козак", avatar: "Ava", id: 8),
+                       UserModel(userName: "Екатерина", surName: "Большакова", avatar: "Ava", id: 9),
+                       UserModel(userName: "Иван", surName: "Пронин", avatar: "Ava", id: 10),
+                       UserModel(userName: "Сергей", surName: "Пронин", avatar: "Ava", id: 11),
+                       UserModel(userName: "Татьяна", surName: "Пронин", avatar: "Ava", id: 12)]
     
     
     var friendsSection = [Section<UserModel>]()
@@ -20,12 +31,14 @@ class FriendsViewController: UITableViewController {
     
     override func viewDidLoad() {
         // super.viewDidLoad()
-        let frindsDictionary = Dictionary.init(grouping: friendsList){
+        let friendsDictionary = Dictionary.init(grouping: friendsList){
             $0.userName.prefix(1)
         }
         
-        friendsSection = frindsDictionary.map { Section(title: String($0.key), items: $0.value) }
+        friendsSection = friendsDictionary.map { Section(title: String($0.key), items: $0.value) }
         friendsSection.sort { $0.title < $1.title }
+        
+        searchBar.delegate = self
     }
     
     
@@ -47,7 +60,7 @@ class FriendsViewController: UITableViewController {
             return UITableViewCell()
         }
         
-        // Оставил вариант с subview с тенью (как вариант) а для основной view стоит атрибут hidden.
+        // Вариант с тенью, subview (как вариант), а для основной view стоит атрибут hidden.
         cell.userName.text = friendsSection[indexPath.section].items[indexPath.row].userName
         // cell.avatar.image = UIImage(named: friendsList[indexPath.row].avatar)
         cell.shadowAvatar.image.image = UIImage(named: friendsSection[indexPath.section].items[indexPath.row].avatar)
@@ -55,18 +68,18 @@ class FriendsViewController: UITableViewController {
         return cell
     }
     
-    /*
-     // Переход по тапу
-     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-     let userName = friendsList[indexPath.row]
-     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-     guard let viewController = storyboard.instantiateViewController(identifier: "PhotoView") as? PhotoView else {
-     return
-     }
-     
-     self.navigationController?.pushViewController(viewController, animated: true)
-     }
-     */
+    
+    // Переход по тапу
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let _ = friendsList[indexPath.row]
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(identifier: "PhotoView") as? PhotoView else {
+            return
+        }
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return friendsSection[section].title
@@ -75,4 +88,26 @@ class FriendsViewController: UITableViewController {
     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return friendsSection.map {$0.title}
     }
+    
 }
+
+// Добовляем SearchBar (строка поиска)
+extension FriendsViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        //print(searchText)
+        let friendsDictionary = Dictionary.init(grouping: friendsList.filter { (user) -> Bool in
+            return searchText.isEmpty ? true : user.userName.lowercased().contains(searchText.lowercased())
+        }) { $0.userName.prefix(1) }
+        
+        friendsSection = friendsDictionary.map { Section(title: String($0.key), items: $0.value) }
+        friendsSection.sort { $0.title < $1.title }
+        tableView.reloadData()
+        
+    }
+    // скрываем клавиатуру по нажатию Search
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        view.endEditing(true)
+    }
+    
+}
+ 
