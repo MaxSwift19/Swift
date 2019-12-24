@@ -8,7 +8,7 @@ struct Section<T> {
 
 class FriendsViewController: UITableViewController {
     
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var SearchBar: UISearchBar!
     
     
     var friendsList = [UserModel(userName: "Максим", surName: "Красавчик ;)", avatar: "Ava", id: 0),
@@ -38,7 +38,7 @@ class FriendsViewController: UITableViewController {
         friendsSection = friendsDictionary.map { Section(title: String($0.key), items: $0.value) }
         friendsSection.sort { $0.title < $1.title }
         
-        searchBar.delegate = self
+        SearchBar.delegate = self
     }
     
     
@@ -60,10 +60,10 @@ class FriendsViewController: UITableViewController {
             return UITableViewCell()
         }
         
-        // Вариант с тенью, subview (как вариант), а для основной view стоит атрибут hidden.
+        // Вариант с тенью, subview (как вариант), а для основной view ставим атрибут hidden.
         cell.userName.text = friendsSection[indexPath.section].items[indexPath.row].userName
-        // cell.avatar.image = UIImage(named: friendsList[indexPath.row].avatar)
-        cell.shadowAvatar.image.image = UIImage(named: friendsSection[indexPath.section].items[indexPath.row].avatar)
+        cell.avatar.image = UIImage(named: friendsList[indexPath.row].avatar)
+       // cell.shadowAvatar.image.image = UIImage(named: friendsSection[indexPath.section].items[indexPath.row].avatar)
         
         return cell
     }
@@ -104,7 +104,7 @@ extension FriendsViewController: UISearchBarDelegate {
         tableView.reloadData()
         
     }
-    // скрываем клавиатуру по нажатию Search
+    // скрываем клавиатуру по нажатию "Search"
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true)
     }

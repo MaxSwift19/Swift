@@ -170,23 +170,28 @@
                                     <rect key="frame" x="0.0" y="0.0" width="292.5" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ava" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nrB-pn-fpP">
+                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9BY-fi-QWM" customClass="CircleShadowImge" customModule="VK_app" customModuleProvider="target">
                                             <rect key="frame" x="15" y="12.5" width="50" height="50"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="nrB-pn-fpP" secondAttribute="height" multiplier="1:1" id="LmW-Rr-VmV"/>
-                                                <constraint firstAttribute="width" constant="50" id="lGC-Dv-Qly"/>
-                                            </constraints>
-                                        </imageView>
+                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lable" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mb4-yH-v9w">
                                             <rect key="frame" x="85" y="25.5" width="197.5" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9BY-fi-QWM" customClass="CircleShadowImge" customModule="VK_app" customModuleProvider="target">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ava" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nrB-pn-fpP">
                                             <rect key="frame" x="15" y="12.5" width="50" height="50"/>
-                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </view>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="nrB-pn-fpP" secondAttribute="height" multiplier="1:1" id="LmW-Rr-VmV"/>
+                                                <constraint firstAttribute="width" constant="50" id="lGC-Dv-Qly"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="25"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="9BY-fi-QWM" firstAttribute="bottom" secondItem="nrB-pn-fpP" secondAttribute="bottom" id="4r6-cQ-J9s"/>
@@ -219,7 +224,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ld-xN-boZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-998" y="-1140"/>
+            <point key="canvasLocation" x="-2704" y="-1948"/>
         </scene>
         <!--Фото-->
         <scene sceneID="0V2-PR-fu1">
@@ -269,7 +274,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G3f-8T-4fr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-255" y="-1139"/>
+            <point key="canvasLocation" x="-1950" y="-2219"/>
         </scene>
         <!--Друзья-->
         <scene sceneID="e60-6p-Gvb">
@@ -287,7 +292,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D40-f6-EPU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1856" y="-1141"/>
+            <point key="canvasLocation" x="-3563" y="-1947"/>
         </scene>
         <!--Сообщества-->
         <scene sceneID="hjz-k7-BhO">
@@ -311,19 +316,22 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.3" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Xob-9D-cZk">
-                                            <rect key="frame" x="15" y="16.5" width="50" height="43"/>
-                                            <color key="backgroundColor" red="0.23137254900000001" green="0.4549019608" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GroupCar" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xob-9D-cZk">
+                                            <rect key="frame" x="15" y="12.5" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="50" id="D8c-HX-R2A"/>
+                                                <constraint firstAttribute="width" secondItem="Xob-9D-cZk" secondAttribute="height" multiplier="1:1" id="v5k-mH-ijs"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="25"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="NCp-0x-phF" firstAttribute="centerY" secondItem="val-CG-33D" secondAttribute="centerY" id="L26-LF-7BM"/>
                                         <constraint firstItem="NCp-0x-phF" firstAttribute="leading" secondItem="Xob-9D-cZk" secondAttribute="trailing" constant="20" id="Mv4-jU-Aay"/>
-                                        <constraint firstAttribute="bottom" secondItem="Xob-9D-cZk" secondAttribute="bottom" constant="15" id="Tzg-sx-r8S"/>
                                         <constraint firstAttribute="trailing" secondItem="NCp-0x-phF" secondAttribute="trailing" constant="15" id="Ukf-IK-CWZ"/>
                                         <constraint firstItem="Xob-9D-cZk" firstAttribute="centerY" secondItem="val-CG-33D" secondAttribute="centerY" id="VuY-lc-mmp"/>
                                         <constraint firstItem="Xob-9D-cZk" firstAttribute="leading" secondItem="val-CG-33D" secondAttribute="leading" constant="15" id="e6b-GF-pMa"/>
@@ -343,7 +351,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jFo-7A-77m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1076" y="-256"/>
+            <point key="canvasLocation" x="-935.625" y="-1470.4225352112676"/>
         </scene>
         <!--Список сообществ-->
         <scene sceneID="dLf-S4-uTB">
@@ -372,7 +380,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G6t-bH-9a7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-255" y="-257"/>
+            <point key="canvasLocation" x="-214" y="-1470"/>
         </scene>
         <!--Сообщества-->
         <scene sceneID="J3Q-zO-Zmd">
@@ -390,7 +398,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCc-BL-cnU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2031" y="-255"/>
+            <point key="canvasLocation" x="-1714" y="-1470"/>
         </scene>
         <!--Группа-->
         <scene sceneID="IhX-1q-BZr">
@@ -427,12 +435,59 @@
                     <connections>
                         <segue destination="szG-5j-rwN" kind="relationship" relationship="viewControllers" id="UbT-Rb-sgQ"/>
                         <segue destination="SNX-US-IRP" kind="relationship" relationship="viewControllers" id="ACW-Ic-hzO"/>
+                        <segue destination="Whz-uH-v1R" kind="relationship" relationship="viewControllers" id="eeE-rj-VPs"/>
                         <segue destination="zqf-w3-yaF" kind="relationship" relationship="viewControllers" id="cXf-KM-gnQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vbp-Jb-Brd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2792" y="-1139"/>
+        </scene>
+        <!--Сообщения-->
+        <scene sceneID="qeR-eo-Uju">
+            <objects>
+                <tableViewController id="EAv-Xf-AAI" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8gV-Of-he6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="tGT-eQ-6Lu">
+                                <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tGT-eQ-6Lu" id="LyH-aF-54c">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EAv-Xf-AAI" id="r43-41-aTp"/>
+                            <outlet property="delegate" destination="EAv-Xf-AAI" id="MBZ-Gx-5w5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Сообщения" id="Tvm-e1-kzl"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ESU-ty-aNU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-934" y="-777"/>
+        </scene>
+        <!--Сообщения-->
+        <scene sceneID="4zt-vh-z9h">
+            <objects>
+                <navigationController id="Whz-uH-v1R" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Сообщения" image="message" catalog="system" id="llf-Li-sUA"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u6H-ub-32T">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EAv-Xf-AAI" kind="relationship" relationship="rootViewController" id="KbT-RY-g6k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lVP-9n-nPy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1716" y="-777"/>
         </scene>
         <!--Новости-->
         <scene sceneID="G14-e9-woB">
@@ -451,7 +506,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKf-bU-IMJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-968" y="-1901"/>
+            <point key="canvasLocation" x="-2012" y="-101"/>
         </scene>
         <!--Новости-->
         <scene sceneID="xCL-lO-Z4D">
@@ -468,13 +523,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5wm-zi-5Rw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1907" y="-1901"/>
+            <point key="canvasLocation" x="-2794" y="-186"/>
         </scene>
     </scenes>
     <resources>
         <image name="Ava" width="211" height="211"/>
         <image name="Foto" width="269" height="383"/>
+        <image name="GroupCar" width="180" height="180"/>
         <image name="macwindow" catalog="system" width="64" height="48"/>
+        <image name="message" catalog="system" width="64" height="58"/>
         <image name="person.2.fill" catalog="system" width="64" height="40"/>
         <image name="person.3" catalog="system" width="72" height="36"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>

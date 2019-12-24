@@ -147,11 +147,19 @@
 				CEA43FC923A100170031E575 /* Groups */,
 				CE78D6B323A0F931006D02B4 /* Model */,
 				CED857D523B0885200B740D9 /* Message */,
+				CEF3244323B0F636000139E4 /* News */,
 				CE3D4B40239F812300C24304 /* Assets.xcassets */,
 				CED86CA1239623EC009BD334 /* LaunchScreen.storyboard */,
 				CED86CA4239623EC009BD334 /* Info.plist */,
 			);
 			path = VK_app;
+			sourceTree = "<group>";
+		};
+		CEF3244323B0F636000139E4 /* News */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

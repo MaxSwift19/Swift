@@ -35,7 +35,7 @@ class CircleShadowImge: UIView {
         layer.shadowRadius = 4.0
         layer.shadowOffset = CGSize(width: 0, height: 1)
         
- // Другой вариант через Storyboard -> Indentity Ispector -> User Defined Runtime Attributes + layer.cornerRadius = Int
+ // Другой вариант через Storyboard -> Indentity Ispector -> User Defined Runtime Attributes + layer.cornerRadius = Number
         image.layer.cornerRadius = bounds.size.height / 2
         image.layer.masksToBounds = true
     }

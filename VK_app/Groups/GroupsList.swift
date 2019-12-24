@@ -12,6 +12,7 @@ class GroupsList: UITableViewController {
         super.viewDidLoad()
         
         addRefreshControl()
+       
     }
     
     // добавляем индикатор обновления
@@ -23,9 +24,9 @@ class GroupsList: UITableViewController {
     }
     
     @objc func updateTableGroups(){
-        print("Start")
+       // print("Start")
         
-        // фун-ия (многопоточность) для отложенного действия, указываем через какое время выполнить
+        // фун-ия (многопоточность) для отложенного действия (указываем через какое время выполнить)
         DispatchQueue.main.asyncAfter(deadline: .now() + 3){
             self.customRefreshControl.endRefreshing()
         }
